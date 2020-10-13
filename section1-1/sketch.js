@@ -4,7 +4,7 @@ function setup() {
 
 function draw() {
   background(0);
-  strokeWeight(4);
+  strokeWeight(8);
   fill(178, 100, 162);
   triangle(12,120,116,120,116,10);
   fill(94, 185, 84);
@@ -12,5 +12,5 @@ function draw() {
   fill(255);
   textSize(32);
   textFont("serif");
-  text("46", 68, 100);
+  text("48", 68, 100);
 }
