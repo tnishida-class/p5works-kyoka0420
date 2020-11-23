@@ -1,11 +1,21 @@
 let t,x;
 let a = 1;  //aは生物的性別を表す。１＝男、２＝女
-let b = 2;  //bは性的指向を表す。１＝男性、２＝女性。３＝両方
-const g = 1; //重力加速度
-const vxMax = 30;
+let b = 1;  //bは性的指向を表す。１＝男性、２＝女性。３＝両方
+let count;
+let cycle;
 
 function setup(){
   createCanvas(windowWidth, windowHeight);
+  count = 0;
+  cycle = 100;
+}
+
+
+function draw(){
+  background(255)
+count = (count + 1) % cycle;
+
+if (count < 50 ){
   noStroke()
   fill(255,105,180)
   rect(0,0,windowWidth/8,windowHeight)
@@ -22,20 +32,27 @@ function setup(){
   fill(75,0,130)
   rect(windowWidth*3/4,0,windowWidth/8,windowHeight)
   fill(128,0,128)
-  rect(windowWidth*7/8,0,windowWidth/8,windowHeight)
-  x = 0;
-  vx = 8
+  rect(windowWidth*7/8,0,windowWidth/8,windowHeight)}
+else {
+  noStroke()
+  fill(255,105,180)
+  rect(0,windowWidth/4,windowWidth/8,windowHeight/2)
+  fill(255,0,0,)
+  rect(windowWidth/8,windowWidth/4,windowWidth/8,windowHeight/2)
+  fill(255,165,0)
+  rect(windowWidth/4,windowWidth/4,windowWidth/8,windowHeight/2)
+  fill(255,255,0)
+  rect(windowWidth* 3/8,windowWidth/4,windowWidth/8,windowHeight/2)
+  fill(0,128,0)
+  rect(windowWidth/2,windowWidth/4,windowWidth/8,windowHeight/2)
+  fill(64,224,208)
+  rect(windowWidth*5/8,windowWidth/4,windowWidth/8,windowHeight/2)
+  fill(75,0,130)
+  rect(windowWidth*3/4,windowWidth/4,windowWidth/8,windowHeight/2)
+  fill(128,0,128)
+  rect(windowWidth*7/8,windowWidth/4,windowWidth/8,windowHeight/2)
+
 }
-
-
-function draw(){
-// background(setup)
-// noStroke()
-// fill(0)
-// rect(x,0,windowWidth/8,windowHeight)
-//  x += vx;
-//   if(x > width){ x = 0; }
-// }
   let bc = color(255)//楕円の中の色
   let tc = color(0)//文字の色
   baloon(t, windowWidth/2, windowHeight/2, tc, bc);
