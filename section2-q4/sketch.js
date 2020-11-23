@@ -1,21 +1,16 @@
-// ギリシャ国旗
+// カタール国旗
 function setup() {
-  const blue = color(0, 51, 160);
-  createCanvas(270, 180);
-  // noStroke();
-  background(255);
-
-  let d = height / 9; // 縞1本の太さ
-
+  createCanvas(300,300)
+  fill(148,36,58)
+  rect(0,0,280,110)
+  let c = color (255)
+  fill(c)
+  noStroke()
+  rect(0,0,80,110)
+  let s = 110/9
   for(let i = 0; i < 9; i++){
-    // BLANK[1] (hint: 縞の色を交互に変えるには2で割った余りを使おう)
-    rect(0, i * d, width, (i + 1) * d);
+    fill(c)
+    noStroke();
+    triangle(80, s * i, 80, s * (i+1), 100, s * i + s/2);
   }
-
-  fill(blue);
-  let size = d * 5;
-  rect(0, 0, size, size);
-
-  fill(255);
-  // BLANK[2] (hint: 白い十字を描くには rect を二つ描こう)
 }

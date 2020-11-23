@@ -8,14 +8,17 @@ function setup() {
   createCanvas(100,100);
   background(196);
   for(let i = 0; i < 9; i++){
-    // 変えるのはここから
-    if(i % 2 == 0){
+
+    if(i < 3){
       strokeWeight(2);
     }
-    else{
-      strokeWeight(1);
+    else if(i < 6){
+      strokeWeight(4)
     }
-    // ここまでの間になります
+    else{
+      strokeWeight(8);
+    }
+
     let x = i * 10 + 10;
     line(x, 0, x, 100);
   }
